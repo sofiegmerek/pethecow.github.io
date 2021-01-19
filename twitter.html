@@ -1,0 +1,74 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" id="page2">
+   <head>
+       <meta charset="utf-8">
+        <link rel="stylesheet" href="petthechicken.css">
+            <title>Twitter</title>
+            <style>
+                li a:hover{background: #3BCE5B;}
+                #tegg{
+                    position: fixed;
+                   left: 60vw;
+                   bottom: 40vh;
+                }
+                </style>
+       </head>
+    <body id="page2">
+        <script>
+        function show(){
+            var mything2 = document.getElementById('twitter');
+            mything2.style.display='none';
+            var mything = document.getElementById('twitterhap');
+            mything.style.display='block';
+            var egg = document.getElementById('tegg');
+            egg.style.display='block';
+            setTimeout(hide, 5000);
+        }
+    </script>
+    
+    <script>
+        function hide(){
+            var egg = document.getElementById('tegg');
+            egg.style.display='none';
+            var mything = document.getElementById('twitterhap');
+            mything.style.display='none';
+            var mything2 = document.getElementById('twitter');
+            mything2.style.display='block';
+
+        }
+        </script>
+        <script>
+            function cluck(){
+                show();
+                var audio = document.getElementById("chicken")
+                 audio.play();
+            }
+            </script>
+        
+        <h1>Pet the Chicken!</h1>
+        <ul>
+            <li><a id="choose" href="petthechicken.html">Choose another chicken to pet:</a></li>
+            <li><a href="orcus.html">Orcus</a></li>
+            <li><a href="twitter.html">Twitter</a></li>
+            <li><a href="greta.html">Greta</a></li>
+            <li><a href="buffet.html">Warren Buffet</a></li>
+            <li><a href="feathermark.html">Feathermark</a></li>
+        </ul>
+        <div id="twitter"><img id="twitter" src="twitterpix.png" height=300px; onclick="cluck()"></div>
+        <div id="twitterhap"  style="display:none;"><img  src="twitterhappy.png"></div>
+        <div id="tegg" class="egg" style="display:none;"><img src="tegg.png" height=100px></div>
+
+        <audio id="chicken">
+            <source src="twitter.mp3" type="audio/mpeg">
+            <source src="twitter.wav" type="audio/wav">
+             <source src="twitter.ogg" type="audio/ogg"></audio>
+
+        <p id="pet">(Click the chicken to pet)</p>
+
+        
+    </body>
+    
+</html>

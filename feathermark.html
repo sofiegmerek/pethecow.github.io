@@ -1,0 +1,86 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" id="page5">
+   <head>
+       <meta charset="utf-8">
+        <link rel="stylesheet" href="petthechicken.css">
+            <title>Feathermark</title>
+            <style>
+                li a:hover{background: #F5D400}
+                
+                #fegg{
+                    position: fixed;
+                   left: 60vw;
+                   bottom: 40vh;
+                }
+                </style>
+            
+       </head>
+    <body id="page5">
+   
+        <script>
+            function show(){
+                var mything2 = document.getElementById('feather');
+                mything2.style.display='none';
+                var mything = document.getElementById('featherpet');
+                mything.style.display='block';
+                var egg = document.getElementById('fegg');
+                egg.style.display='block';
+
+                setTimeout(hide, 7000);
+                }
+                
+        </script>
+        
+        <script>
+            function hide(){
+                var mything = document.getElementById('featherpet');
+                mything.style.display='none';
+                var egg = document.getElementById('fegg');
+                egg.style.display='none';
+                var mything2 = document.getElementById('feather');
+                mything2.style.display='block';
+            
+
+            }
+
+            </script>
+    
+        <script>
+            function cluck(){
+                show();
+                var audio = document.getElementById("chicken")
+                 audio.play();
+                 
+            }
+        </script>
+        
+        
+        <h1 class="dark">Pet the Chicken!</h1>
+        <ul class="dark">
+            <li><a id="choose" class="dark" href="petthechicken.html">Choose another chicken to pet:</a></li>
+            <li><a class="dark" href="orcus.html">Orcus</a></li>
+            <li><a class="dark" href="twitter.html">Twitter</a></li>
+            <li><a  class="dark" href="greta.html">Greta</a></li>
+            <li><a  class="dark" href="buffet.html">Warren Buffet</a></li>
+            <li><a  class="dark" href="feathermark.html">Feathermark</a></li>
+        </ul>
+        <div id="feather"><img id="feather" src="featherpix.png" height=300px; onclick="cluck()"></div>
+        <div id="featherpet"  style="display:none;"><img  src="featherafter.png"></div>
+        <div id="fegg" class="egg" style="display:none;"><img src="fegg.png" height=100px></div>
+
+        <audio id="chicken">
+            <source src="feather1.mp3" type="audio/mpeg">
+            <source src="feather1.wav" type="audio/wav">
+             <source src="feather1.ogg" type="audio/ogg"></audio>
+
+        <p id="pet" class="dark">(Click the chicken to pet)</p>
+
+    </body>
+    
+</html>

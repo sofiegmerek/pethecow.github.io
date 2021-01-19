@@ -1,0 +1,76 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" id="page4">
+   <head>
+       <meta charset="utf-8">
+        <link rel="stylesheet" href="petthechicken.css">
+            <title>Warren Buffet</title>
+            <style> li a:hover{background: #FB747B}
+            #wegg{
+                position: fixed;
+               left: 60vw;
+               bottom: 40vh;
+            }
+            </style>
+       </head>
+    <body id="page4">
+        <script>
+            function show(){
+                var mything2 = document.getElementById('buffet');
+                mything2.style.display='none';
+                var mything = document.getElementById('buffethap');
+                mything.style.display='block';
+                var egg = document.getElementById('wegg');
+                egg.style.display='block';
+
+                setTimeout(hide, 5000);
+            }
+        </script>
+        
+        <script>
+            function hide(){
+                var mything = document.getElementById('buffethap');
+                mything.style.display='none';
+                var egg = document.getElementById('wegg');
+                egg.style.display='none';
+                var mything2 = document.getElementById('buffet');
+                mything2.style.display='block';
+
+            }
+            </script>
+
+        <script>
+            function cluck(){
+                show();
+                var audio = document.getElementById("chicken")
+                 audio.play();
+            }
+        </script>
+        
+        <h1>Pet the Chicken!</h1>
+        <ul>
+            <li><a id="choose" href="petthechicken.html">Choose another chicken to pet:</a></li>
+            <li><a href="orcus.html">Orcus</a></li>
+            <li><a href="twitter.html">Twitter</a></li>
+            <li><a href="greta.html">Greta</a></li>
+            <li><a href="buffet.html">Warren Buffet</a></li>
+            <li><a href="feathermark.html">Feathermark</a></li>
+        </ul>
+        <div id="buffet"><img id="buffet" src="buffetpix.png" onclick="cluck()"></div>
+        <div id="wegg" class="egg" style="display:none;"><img src="wegg.png" height=100px></div>
+        <div id="buffethap"  style="display:none;"><img  src="buffethappy.png"></div>
+
+        <audio id="chicken">
+            <source src="buffet.mp3" type="audio/mpeg">
+            <source src="buffet.wav" type="audio/wav">
+             <source src="buffet.ogg" type="audio/ogg"></audio>
+
+        <p id="pet">(Click the chicken to pet)</p>
+
+    </body>
+    
+</html>

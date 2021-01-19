@@ -1,0 +1,76 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" id="page3">
+   <head>
+       <meta charset="utf-8">
+        <link rel="stylesheet" href="petthechicken.css">
+            <title>Greta</title>
+            <style>
+                li a:hover{background: #AD98AE;}
+                #gegg{
+                    position: fixed;
+                   left: 60vw;
+                   bottom: 40vh;
+                }
+                </style>
+       </head>
+    <body id="page3">
+        <script>
+            function show(){
+                var mything2 = document.getElementById('greta');
+                mything2.style.display='none';
+                var mything = document.getElementById('gretahap');
+                mything.style.display='block';
+                var egg = document.getElementById('gegg');
+                egg.style.display='block';
+
+                setTimeout(hide, 5000);
+            }
+        </script>
+        
+        <script>
+            function hide(){
+                var egg = document.getElementById('wegg');
+                egg.style.display='none';
+                var mything = document.getElementById('gretahap');
+                mything.style.display='none';
+                var mything2 = document.getElementById('greta');
+                mything2.style.display='block';
+
+            }
+            </script>
+        <script>
+            function cluck(){
+                show();
+                var audio = document.getElementById("chicken")
+                 audio.play();
+            }
+        </script>
+        
+        <h1>Pet the Chicken!</h1>
+        <ul>
+            <li><a id="choose" href="petthechicken.html">Choose another chicken to pet:</a></li>
+            <li><a href="orcus.html">Orcus</a></li>
+            <li><a href="twitter.html">Twitter</a></li>
+            <li><a href="greta.html">Greta</a></li>
+            <li><a href="buffet.html">Warren Buffet</a></li>
+            <li><a href="feathermark.html">Feathermark</a></li>
+        </ul>
+        <div id="greta"><img id="greta" src="gretapix.png" height=300px; onclick="cluck()"></div>
+        <div id="gretahap"  style="display:none;"><img  src="gretahappy.png"></div>
+        <div id="gegg" class="egg" style="display:none;"><img src="gegg.png" height=100px></div>
+
+
+        <audio id="chicken">
+            <source src="greta.mp3" type="audio/mpeg">
+            <source src="greta.wav" type="audio/wav">
+             <source src="greta.ogg" type="audio/ogg"></audio>
+
+        <p id="pet">(Click the chicken to pet)</p>
+
+    </body>
+    
+</html>

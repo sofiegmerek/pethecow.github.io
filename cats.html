@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -15,31 +16,70 @@
         <link rel="stylesheet" href="petthechicken.css">
             <title>Pet the Cat</title>
             <style>
+                html,body{background-color: #9DD9D2;}
+         #luN {
+             font-family: courier;
+         font-size: 12px;
+         color: black;
+       
+         margin-left: -400px;
+        
+    
+               }
+            #nameL{
+                font-family: courier;
+            font-size: 18px;
+            color: black;
+            position:fixed;
+            margin-left: 123px;
+            }
+            
+            #nameT{
+                font-family: courier;
+            font-size: 18px;
+            color: black;
+            position:fixed;
+            margin-left: 425px;
          
-               
+            }
+            #nameF{
+                font-family: courier;
+            font-size: 18px;
+            color: black;
+            position:fixed;
+            margin-left: 750px;
+         
+            }
+            #pet{
+           font-family: courier;
+            font-size: 12px;
+            text-align: center;
+            }
+            h1{
+                text-align:center;
+            }
+         
                 </style>
+            
        </head>
     <body>
         <script>
-            function show(){
-                var mything2 = document.getElementById('chick');
+            function showLulu(){
+                var mything2 = document.getElementById('lulu');
                 mything2.style.display='none';
-                var mything = document.getElementById('chickhap');
+                var mything = document.getElementById('luluhap');
                 mything.style.display='block';
-                var egg = document.getElementById('egg');
-                egg.style.display='block';
-                setTimeout(hide, 5000);
+                setTimeout(hideLulu, 5000);
             }
         </script>
      
         
         <script>
-            function hide(){
-                var egg = document.getElementById('egg');
-                egg.style.display='none';
-                var mything = document.getElementById('chickhap');
+            function hideLulu(){
+                
+                var mything = document.getElementById('luluhap');
                 mything.style.display='none';
-                var mything2 = document.getElementById('chick');
+                var mything2 = document.getElementById('lulu');
                 mything2.style.display='block';
 
             }
@@ -47,26 +87,105 @@
             </script>
         
         <script>
-            function cluck(){
-                show();
-                var audio = document.getElementById("chicken")
+            function meowLulu(){
+                showLulu();
+                var audio = document.getElementById("luluPurr")
                  audio.play();
+               
+            }
+            </script>
+        
+        <script>
+            function showTubby(){
+                var mything2 = document.getElementById('tubby');
+                mything2.style.display='none';
+                var mything = document.getElementById('tubbyhap');
+                mything.style.display='block';
+                setTimeout(hideTubby, 5000);
+            }
+        </script>
+     
+        
+        <script>
+            function hideTubby(){
+                
+                var mything = document.getElementById('tubbyhap');
+                mything.style.display='none';
+                var mything2 = document.getElementById('tubby');
+                mything2.style.display='block';
+
             }
 
             </script>
         
-        <h1>Pet the Chicken!</h1>
+        <script>
+            function meowTubby(){
+                showTubby();
+                var audio = document.getElementById("meow")
+                 audio.play();
+               
+            }
+            </script>
+        
+        <script>
+            function showFelix(){
+                var mything2 = document.getElementById('felix');
+                mything2.style.display='none';
+                var mything = document.getElementById('felixhap');
+                mything.style.display='block';
+                setTimeout(hideFelix, 5000);
+            }
+        </script>
+     
+        
+        <script>
+            function hideFelix(){
+                
+                var mything = document.getElementById('felixhap');
+                mything.style.display='none';
+                var mything2 = document.getElementById('felix');
+                mything2.style.display='block';
 
-        <div id="chick"><img id="chick" src="pixelchicken.png" onclick="cluck()"></div>
-        <div id="chickhap"  style="display:none;"><img  src="chickhappy.png"></div>
-        <div id="egg" class="egg" style="display:none;"><img src="egg.png" height=100px></div>
+            }
 
-        <audio id="chicken">
-            <source src="chicken1.mp3" type="audio/mpeg">
-            <source src="chicken1.wav" type="audio/wav">
-             <source src="chicken1.ogg" type="audio/ogg"></audio>
-       
-        <p id="pet">(Click the chicken to pet)</p>
+            </script>
+        
+        <script>
+            function meowFelix(){
+                showFelix();
+                var audio = document.getElementById("mew")
+                 audio.play();
+               
+            }
+            </script>
+        
+        
+        
+        <h1>Pet the Cat!</h1>
+        <p id = "nameL">Lulu</p>
+        <p id = "nameT">Tubby</p>
+        <p id = "nameF">Felix</p>
+        <div id="lulu"><img id="lulu" style="position:relative;" src="lulu.png" onclick="meowLulu()"></div>
+
+        <div id="luluhap"  style="display:none;"><img  src="luluhappy.png"></div>
+
+        <div id="tubby"><img id="tubby" style = "float: left; position:fixed;margin-left: 320px; margin-top: -300px;" src="tubby.png" onclick="meowTubby()"></div>
+        <div id="tubbyhap"  style="display:none; float: left;margin-left: 320px; position:fixed; margin-top: -300px;"><img  src="tubbyhappy.png"></div>
+        
+        <div id="felix"><img id="felix" style = "float: right;margin-left: 650px; position:fixed; margin-top: -300px;" src="felix.png" onclick="meowFelix()"></div>
+        <div id="felixhap"  style="display:none; float: left;margin-left: 650px; position:fixed; margin-top: -300px;"><img  src="felixhappy.png"></div>
+        
+        
+        <audio id="luluPurr">
+            <source src="lulu.mp3" type="audio/mpeg">
+           </audio>
+        <audio id="meow">
+            <source src="meow.mp3" type="audio/mpeg">
+           </audio>
+        <audio id="mew">
+            <source src="mew.mp3" type="audio/mpeg">
+           </audio>
+        <p id="pet">(Click a cat to pet)</p>
     </body>
     
 </html>
